@@ -10,6 +10,5 @@ RUN apk add --no-cache git \
     && cp /usr/share/zoneinfo/UTC /etc/localtime \
     && echo "UTC" >  /etc/timezone \
     && apk del gcc make autoconf alpine-sdk libc-dev linux-headers python-dev tzdata \
-    && apk cache clean \
     && rm -rf ~/.cache
 CMD [ "python", "/files/new.py" ]
